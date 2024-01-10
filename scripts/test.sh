@@ -1,3 +1,3 @@
 SOLUTION=$1
 
-dotnet test $SOLUTION --logger:trx --results-directory:/src/TestResults -m:1 /p:CollectCoverage=true /p:CoverletOutputFormat=json%2Clcov%2Copencover /p:CoverletOutput=/src/TestResults/ /p:MergeWith=/src/TestResults/coverage.json
+dotnet test $SOLUTION --logger:trx --results-directory:/src/TestResults -p:CollectCoverage=true -p:CoverletOutputFormat=json%2Clcov%2Copencover -p:CoverletOutput=/src/TestResults/ -p:MergeWith=/src/TestResults/coverage.json -m:1
