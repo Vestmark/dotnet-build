@@ -10,7 +10,7 @@ dotnet sonarscanner begin \
     /d:sonar.host.url=${SONAR_HOST_URL} \
     /v:${BUILD_NUMBER} \
     /s:/src/SonarQube.Analysis.xml \
-    /d:sonar.cs.opencover.reportsPaths=/src/TestResults/lcov.opencover.xml \
+    /d:sonar.cs.opencover.reportsPaths=/src/TestResults/coverage.opencover.xml \
     /d:sonar.branch.name=${BRANCH_NAME} \
     $SONAR_TARGET_BRANCH
 dotnet publish $SOLUTION -c Release
