@@ -26,4 +26,4 @@ COPY --chown=jenkins:jenkins ./scripts /scripts
 RUN dotnet tool install --global dotnet-sonarscanner
 RUN dotnet tool install --global Amazon.Lambda.Tools
 
-RUN echo "export PATH=$PATH:/home/jenkins/.dotnet/tools:/scripts" >> ~/.bashrc
+RUN echo "export PATH=/home/jenkins/.dotnet/tools:/scripts:$PATH" >> ~/.bashrc
