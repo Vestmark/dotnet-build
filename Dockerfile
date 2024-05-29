@@ -24,5 +24,6 @@ COPY --chown=jenkins:jenkins ./scripts /scripts
 
 # Install dotnet tools
 RUN dotnet tool install --global dotnet-sonarscanner
+RUN dotnet tool install -g Amazon.Lambda.Tools
 
 RUN echo "export PATH=$PATH:/home/jenkins/.dotnet/tools:/scripts:usr/local/aws-sam-cli" >> ~/.bashrc
