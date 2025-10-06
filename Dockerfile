@@ -18,7 +18,7 @@ WORKDIR /src
 
 COPY --chown=jenkins:jenkins ./scripts /scripts
 
-# Create symlinks to retired test script
+# Create symlinks to renamed test scripts
 RUN ln -s /scripts/test.sh /scripts/test-cc.sh
 RUN ln -s /scripts/sonar.sh /scripts/sonar-cc.sh
 
