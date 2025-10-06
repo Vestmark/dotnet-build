@@ -12,9 +12,11 @@ RUN apt-get install -y openjdk-17-jre-headless
 RUN ln -s /usr/lib/jvm/java-17-openjdk-amd64 /usr/lib/jvm/openjdk-11.0.16_8
 RUN ln -s /usr/lib/jvm/java-17-openjdk-amd64 /usr/lib/jvm/openjdk-17
 
-# Create symlink to retired test script
+# Create symlinks to retired test script
 RUN ln -s /script/test.sh /script/test-cc.sh
 RUN chmod +x /script/test-cc.sh
+RUN ln -s /script/sonar.sh /script/sonar-cc.sh
+RUN chmod +x /script/sonar-cc.sh
 
 USER jenkins
 
