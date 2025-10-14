@@ -18,10 +18,6 @@ WORKDIR /src
 
 COPY --chown=jenkins:jenkins ./scripts /scripts
 
-# Create symlinks to renamed test scripts
-RUN ln -s /scripts/test.sh /scripts/test-cc.sh
-RUN ln -s /scripts/sonar.sh /scripts/sonar-cc.sh
-
 # Install dotnet tools
 RUN dotnet tool install --global dotnet-sonarscanner
 
